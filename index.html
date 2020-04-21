@@ -4,7 +4,11 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Code Quiz</title>
+
+    <!--Import Google Icon Font-->
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <!-- Compiled and minified CSS -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
 
     <link href="https://fonts.googleapis.com/css2?family=Lora&display=swap" rel="stylesheet">
 
@@ -14,7 +18,46 @@
 </head>
 
 <body>
+    <div class="container">
 
+        <div class="row">
+            <div class="col m6 push-s6 center-align">
+                <div class="start-quiz" id="box"> Know your animal's?
+                    <br>Take this Quiz!
+                    <br>
+                    <br>
+                    <a id="start-btn" class="btn-floating btn-large pulse blue darken-4"><i
+                            class="material-icons">cloud</i></a>
+                </div>
+            </div>
+        </div>
+
+        <div id="minutes" class="hide">5</div>
+        <div id="seconds" class="hide">00</div>
+        <div id="question-container" class="hide">
+            <p>Commonly used data types DO NOT include?</p>
+            <p>When a syntax error occurs?</p>
+            <p>What is an algorithm?</p>
+            <p>What are variables?</p>
+            <p>What is an Array?</p>
+            <div id="answer-btn" class="buttons">
+                <div class="choice" id="A" onclick=""></div>
+                <div class="choice" id="B" onclick=""></div>
+                <div class="choice" id="C" onclick=""></div>
+
+
+
+
+            </div>
+        </div>
+
+
+
+
+
+        <!-- Compiled and minified JavaScript -->
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
+        <script src="main.js"></script>
 </body>
 
 </html>
