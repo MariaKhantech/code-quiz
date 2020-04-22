@@ -9,55 +9,100 @@
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
     <!-- Compiled and minified CSS -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
-
+    <!--My google font choice-->
     <link href="https://fonts.googleapis.com/css2?family=Lora&display=swap" rel="stylesheet">
 
     <link rel="stylesheet" href="style.css">
 
-    <title>Code Quiz</title>
+    <title>Animal Quiz Games</title>
 </head>
 
 <body>
-    <div class="container">
 
+    <nav>
+        <div class="nav-wrapper blue darken-4">
+            <a href="#" class="brand-logo center">Animal Quiz Games</a>
+            <ul id="nav-mobile" class="left hide-on-med-and-down">
+                <li><a href="badges.html">How to Play</a></li>
+                <li><a href="collapsible.html">About Us</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <div class="container input-field">
+         
         <div class="row">
-            <div class="col m6 push-s6 center-align">
-                <div class="start-quiz" id="box"> Know your animal's?
-                    <br>Take this Quiz!
+            <div class="col m6  center-align">
+                <div class="row">
+                    <h4> Time Remaining: </h4>
+                    <h4 id = "timer">70 secs</h4>
+                </div>
+                
+                <div class="start-quiz text-align" id="box">
+                    <p id="question">Think you know your animal's?<br>
+                        Take this quiz!</p>
+
                     <br>
                     <br>
-                    <a id="start-btn" class="btn-floating btn-large pulse blue darken-4"><i
-                            class="material-icons">cloud</i></a>
+                    <button onclick="startGame()" class="btn waves-effect waves-light" name="action">Submit
+                        <i class="material-icons right">send</i>
+                      </button>
+
+                            <div class="multi-choice hide">
+                                <label class="">
+                                    <input class="with-gap" name="group1" type="radio"  />
+                                    <span>A</span>
+                                  </label>
+                                  <label class="">
+                                    <input class="with-gap" name="group1" type="radio"  />
+                                    <span>B</span>
+                                  </label>
+                                  <label class="">
+                                    <input class="" name="group1" type="radio"  />
+                                    <span>C</span>
+                                  </label>
+                                  <label class="">
+                                    <input class="with-gap" name="group1" type="radio"  />
+                                    <span>D</span>
+                                  </label>
+                            </div>
+                    
                 </div>
             </div>
         </div>
 
-        <div id="minutes" class="hide">5</div>
-        <div id="seconds" class="hide">00</div>
-        <div id="question-container" class="hide">
-            <p>Commonly used data types DO NOT include?</p>
-            <p>When a syntax error occurs?</p>
-            <p>What is an algorithm?</p>
-            <p>What are variables?</p>
-            <p>What is an Array?</p>
-            <div id="answer-btn" class="buttons">
-                <div class="choice" id="A" onclick=""></div>
-                <div class="choice" id="B" onclick=""></div>
-                <div class="choice" id="C" onclick=""></div>
 
-
-
-
-            </div>
+        <div class="multi-choice">
+            <label class="hidse">
+                <input class="with-gap" name="group1" type="radio"  />
+                <span>A</span>
+              </label>
+              <label class="hide">
+                <input class="with-gap" name="group1" type="radio"  />
+                <span>B</span>
+              </label>
+              <label class="hide">
+                <input class="with-gap" name="group1" type="radio"  />
+                <span>C</span>
+              </label>
+              <label class="hide">
+                <input class="with-gap" name="group1" type="radio"  />
+                <span>D</span>
+              </label>
         </div>
 
 
 
+    </div>
+    </div>
+
+    </div>
 
 
-        <!-- Compiled and minified JavaScript -->
-        <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
-        <script src="main.js"></script>
+
+    <!-- Compiled and minified JavaScript -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
+    <script src="./script.js"></script>
 </body>
 
 </html>
