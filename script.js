@@ -1,7 +1,33 @@
-document.querySelector('#start-btn');
 //variables
 var count = 70;
-var counter = setInterval(timer, 1000); //1000 will  run it every 1 second
+var counter; //1000 will  run it every 1 second
+
+var questionOne = {
+	question: 'What primate is the most endangered?',
+	choices: [ ':Orangutans', 'Gorillas', 'Lemurs', 'All Primates' ],
+	correctAnswer: 'All Primates'
+};
+var questionTwo = {
+	question: 'Which zoo animal is endangered, that is a African artiodactyl mammal?',
+	choices: [ 'Polar bear', 'Siberian tiger', 'Giraffe', 'Elephant' ],
+
+	correctAnswer: 'Giraffe'
+};
+
+var questionThree = {
+	question:
+		'All the animals in the Artic Tundra region are endangered due to its habitat, but which one of these animals is the closest to extincion in the Artic?',
+	choices: [ 'Artic fox', 'Polar bear', 'Narwhal', 'Musk Ox' ],
+
+	correctAnswer: 'Artic fox'
+};
+
+var questionFour = {
+	question: 'What is the percentage of large animals in the Sahara Desert going extinct?',
+	answer: [ '75%', '20%', '43%', '86%' ],
+
+	correctAnswer: '86%'
+};
 
 //functions
 function timer() {
@@ -15,45 +41,50 @@ function timer() {
 }
 
 function startGame() {
-	console.log('startGame');
+	//start the timer
+	counter = setInterval(timer, 1000);
+	startBtn.classList.add('hide');
+	//set the first question//
+	document.querySelector('#question').innerHTML = questionOne.question;
+	//unhide choices//
+	choices.classList.remove('hide');
 }
-
 //Questions//
-var questions = [
-		{
-			question: 'What primate is the most endangered?',
-			answer: [ ':Orangutans', 'Gorillas', 'Lemurs', 'All Primates' ],
-			correctAnswer: 'All Primates'
-		}
-	],
-	questions = [
-		{
-			question: 'Which zoo animal is endangered, that is a African artiodactyl mammal?',
-			answer: [ 'Polar bear', 'Siberian tiger', 'Giraffe', 'Elephant' ],
+// var questions = [
+// 		{
+// 			question: 'What primate is the most endangered?',
+// 			answer: [ ':Orangutans', 'Gorillas', 'Lemurs', 'All Primates' ],
+// 			correctAnswer: 'All Primates'
+// 		}
+// 	],
+// 	questions = [
+// 		{
+// 			question: 'Which zoo animal is endangered, that is a African artiodactyl mammal?',
+// 			answer: [ 'Polar bear', 'Siberian tiger', 'Giraffe', 'Elephant' ],
 
-			correctAnswer: 'Giraffe'
-		}
-	],
-	questions = [
-		{
-			question:
-				'All the animals in the Artic Tundra region are endangered due to its habitat, but which one of these animals is the closest to extincion in the Artic?',
-			answer: [ 'Artic fox', 'Polar bear', 'Narwhal', 'Musk Ox' ],
+// 			correctAnswer: 'Giraffe'
+// 		}
+// 	],
+// 	questions = [
+// 		{
+// 			question:
+// 				'All the animals in the Artic Tundra region are endangered due to its habitat, but which one of these animals is the closest to extincion in the Artic?',
+// 			answer: [ 'Artic fox', 'Polar bear', 'Narwhal', 'Musk Ox' ],
 
-			correctAnswer: 'Artic fox'
-		}
-	],
-	questions = [
-		{
-			question: 'What is the percentage of large animals in the Sahara Desert going extinct?',
-			answer: [ '75%', '20%', '43%', '86%' ],
+// 			correctAnswer: 'Artic fox'
+// 		}
+// 	],
+// 	questions = [
+// 		{
+// 			question: 'What is the percentage of large animals in the Sahara Desert going extinct?',
+// 			answer: [ '75%', '20%', '43%', '86%' ],
 
-			correctAnswer: '86%'
-		}
-	];
+// 			correctAnswer: '86%'
+// 		}
+// 	];
 
 //Starts game//
-var timer;
+// var timer;
 // var game = {
 // 	questions: questions,
 // 	currentQuestions: 0,
