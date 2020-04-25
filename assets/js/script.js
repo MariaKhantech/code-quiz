@@ -67,6 +67,8 @@ function startGame() {
 	//Calling the function populate choice and passing in question one//
 	populateChoice(questionObjectArray[questionPosition]);
 }
+//End game function//
+function endGame(timeIsUp) {}
 
 //Populate choice passes in a question object (aQuestion) so we can load choices to HTML//
 function populateChoice(aQuestion) {
@@ -79,25 +81,19 @@ function populateChoice(aQuestion) {
 
 function checkAnswer() {
 	console.log('onclick worked');
-	var choiceButton = event.srcElement.id;
-	console.log(radioButtton);
+	var choiceButtonId = event.srcElement.id;
+	var choiceButton = document.getElementById(choiceButtonId);
+
+	//If the answer is right + 25 to the score, and if the answer is wrong deduct 10 seconds and -10 points/
+	if (choiceButton.innerHTML === questionObjectArray[questionPosition].correctAnswer) {
+		score = score + 25;
+	} else {
+		score = score - 10;
+		count = count - 10;
+	}
+
+	//Transition to the next question//
+	questionPosition = questionPosition + 1;
+	populateChoice(questionObjectArray[questionPosition]);
+	document.querySelector('#question').innerHTML = questionObjectArray[questionPosition].question;
 }
-// //checks if answers are correct//
-// function checkAnswers(question) {
-// 	console.log('checked');
-// 	var correctAnswer = question.correctAnswer;
-// 	if (check1.checked && correctAnswer === check1.value) {
-// 		console.log('checked');
-// 		score += 10;
-// 	} else if (check2.checked) {
-// 		console.log('checked');
-// 		score += 10;
-// 	} else if (check3.checked) {
-// 		score += 10;
-// 	} else if (check4.checked) {
-// 		score += 10;
-// 	} else {
-// 		score -= 10;
-// 	}
-// }
-//checks if answers are correct//
