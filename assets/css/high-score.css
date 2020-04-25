@@ -9,28 +9,9 @@
 }
 
 body {
-	background-image: url(https://images.pexels.com/photos/615306/blue-butterfly-drink-hang-615306.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260);
+	background: no-repeat center fixed
+		url(https://images.unsplash.com/photo-1527931337379-81d740b20c2e?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1350&q=80);
 
-	/* fill background */
-	min-height: 100%;
-	min-width: 1024px;
-
-	/*sets up image proportions*/
-	width: 100%;
-	height: auto;
-
-	/*positioning */
-	position: fixed;
-	top: 0;
-	left: 0;
-}
-
-.row .col {
-	float: none !important;
-	margin-left: auto;
-	margin-right: auto;
-	margin-top: 200px;
-}
-#row1 {
-	margin-top: -30px;
+	background-size: cover;
+	height: 100vh;
 }

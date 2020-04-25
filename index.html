@@ -43,59 +43,41 @@
 
                     <br>
                     <br>
+                    <!--button-->
                     <button onclick="startGame()" id="startBtn" class="btn waves-effect waves-light btn-large btn-floating  blue darken-4" name="action ">Start
                         <i class="material-icons right"></i>
                       </button>
-
-                            <div id="choices" class=" hide">
-                                <label>
-                                    <input data-answer= "A" id="check1" class="with-gap" name="group1" type="radio"  />
-                                    <span id="choice1">A</span>
-                                  </label>
-                                  <label>
-                                    <input id="check2" class="with-gap" name="group1" type="radio"  />
-                                    <span id="choice2">B</span>
-                                  </label>
-                                  <label>
-                                    <input id="check3" class="" name="group1" type="radio"  />
-                                    <span id="choice3">C</span>
-                                  </label>
-                                  <label>
-                                    <input id="check4" class="with-gap" name="group1" type="radio"  />
-                                    <span id="choice4">D</span>
-                                  </label>
-                            </div>
-                          </div>
+                      <!--choices-->
+                      <div class="hide" id="choices">
+                        <a onclick="checkAnswer()" id="choice1" class="waves-effect waves-light btn-small  amber darken-2">Button</a>
+                        <a onclick="checkAnswer()" id="choice2" class="waves-effect waves-light btn-small  amber darken-2">Button</a>
+                        <a onclick="checkAnswer()" id="choice3" class="waves-effect waves-light btn-small amber darken-2">Button</a>
+                        <a onclick="checkAnswer()" id="choice4" class="waves-effect waves-light btn-small  amber darken-2">Button</a>
+                      </div>
+                  </div>
                 </div>
             </div>
         </div>
 
 
-        <!-- <div class="multi-choice">
-            <label class="hidse">
-                <input class="with-gap" name="group1" type="radio"  />
-                <span>A</span>
-              </label>
-              <label class="hide">
-                <input class="with-gap" name="group1" type="radio"  />
-                <span>B</span>
-              </label>
-              <label class="hide">
-                <input class="with-gap" name="group1" type="radio"  />
-                <span>C</span>
-              </label>
-              <label class="hide">
-                <input class="with-gap" name="group1" type="radio"  />
-                <span>D</span>
-              </label>
-        </div>
- -->
-
-<!-- 
-    </div>
-    </div>
-
-    </div> -->
+        <!-- <div id="choices" class=" hide">
+          <label>
+              <input id ="check1" onclick="checkAnswer()" class="with-gap" name="group1" type="radio"  />
+              <span id="choice1">A</span>
+            </label>
+            <label>
+              <input id="check2" class="with-gap" name="group1" type="radio"  />
+              <span id="choice2">B</span>
+            </label>
+            <label>
+              <input id="check3" class="" name="group1" type="radio"  />
+              <span id="choice3">C</span>
+            </label>
+            <label>
+              <input id="check4" class="with-gap" name="group1" type="radio"  />
+              <span id="choice4">D</span>
+            </label>
+      </div> -->
 
 
     

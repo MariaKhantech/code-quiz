@@ -2,18 +2,15 @@ const choice1 = document.querySelector('#choice1');
 const choice2 = document.querySelector('#choice2');
 const choice3 = document.querySelector('#choice3');
 const choice4 = document.querySelector('#choice4');
-//checks value of answer//
-const check1 = document.getElementById('check1');
-const check2 = document.getElementById('check2');
-const check3 = document.getElementById('check3');
-const check4 = document.getElementById('check4');
 
+//Holds score//
 var score = 0;
 
-//variables for questions//
+//Timer variable//
 var count = 70;
 var counter;
 
+//Objects that hold questions, choices and answers//
 var questionOne = {
 	question: 'What primate is the most endangered?',
 	choices: [ 'Orangutans', 'Gorillas', 'Lemurs', 'All Primates' ],
@@ -41,9 +38,11 @@ var questionFour = {
 	correctAnswer: '86%'
 };
 
+//Array to call my questions//
 var questionObjectArray = [ questionOne, questionTwo, questionThree, questionFour ];
+var questionPosition = 0;
 
-//functions
+//Timer function//
 function timer() {
 	count = count - 1;
 	if (count <= 0) {
@@ -54,30 +53,34 @@ function timer() {
 	document.querySelector('#timer').innerHTML = count + ' secs';
 }
 
-// startGame();
-
+//Starts the Quiz game//
 function startGame() {
 	//start the timer
 	counter = setInterval(timer, 1000);
+	//adds class hide to div for button//
 	startBtn.classList.add('hide');
 	//set the first question//
-	document.querySelector('#question').innerHTML = questionOne.question;
-	//unhide choices//
+	document.querySelector('#question').innerHTML = questionObjectArray[questionPosition].question;
+	//unhide choices buttons//
 	choices.classList.remove('hide');
 
-	populateChoice(questionOne);
-	// populate Choice(questionTwo);
+	//Calling the function populate choice and passing in question one//
+	populateChoice(questionObjectArray[questionPosition]);
 }
 
-//populates choices//
-function populateChoice(question) {
-	choice1.innerHTML = question.choices[0];
-	choice2.innerHTML = question.choices[1];
-	choice3.innerHTML = question.choices[2];
-	choice4.innerHTML = question.choices[3];
+//Populate choice passes in a question object (aQuestion) so we can load choices to HTML//
+function populateChoice(aQuestion) {
+	console.log(aQuestion);
+	choice1.innerHTML = aQuestion.choices[0];
+	choice2.innerHTML = aQuestion.choices[1];
+	choice3.innerHTML = aQuestion.choices[2];
+	choice4.innerHTML = aQuestion.choices[3];
+}
 
-	checkAnswers(question);
-	// checkAnswers(question);
+function checkAnswer() {
+	console.log('onclick worked');
+	var choiceButton = event.srcElement.id;
+	console.log(radioButtton);
 }
 // //checks if answers are correct//
 // function checkAnswers(question) {
