@@ -15,3 +15,20 @@ body {
 	background-size: cover;
 	height: 100vh;
 }
+
+html {
+	font-family: 'Times New Roman', Times, serif;
+}
+
+#row2 {
+	display: flex;
+	position: center;
+	justify-content: center;
+}
+
+#row2 {
+	display: flex;
+	position: right;
+	top: 0;
+	left: 0;
+}

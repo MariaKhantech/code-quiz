@@ -105,7 +105,7 @@ function checkAnswer() {
 		score = score + 25;
 	} else {
 		score = score - 10;
-		count = count - 10;
+		count = count - 15;
 	}
 
 	//Transition to the next question//
@@ -119,13 +119,20 @@ function checkAnswer() {
 }
 
 function saveScore() {
-	console.log('in svae score');
 	var initials = document.querySelector('#scoreInitals').value;
-
+	//Initialzing the high score array if not in local storage//
+	if (JSON.parse(localStorage.getItem('highscores'))) {
+		var highscoreArray = JSON.parse(localStorage.getItem('highscores'));
+	} else {
+		var highscoreArray = [];
+	}
+	//Object that holds data for name and score//
 	var nameScore = {
 		name: initials,
 		score: score
 	};
+	// Putting namescore object into the highscore array//
+	highscoreArray.push(nameScore);
 
 	localStorage.setItem(scoresKey++, JSON.stringify(nameScore));
 
