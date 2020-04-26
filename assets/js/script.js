@@ -3,6 +3,10 @@ const choice2 = document.querySelector('#choice2');
 const choice3 = document.querySelector('#choice3');
 const choice4 = document.querySelector('#choice4');
 
+//for saving scores
+scores = [];
+scoresKey = 0;
+
 //Holds score//
 var score = 0;
 
@@ -47,7 +51,8 @@ function timer() {
 	count = count - 1;
 	if (count <= 0) {
 		clearInterval(counter);
-		//counter ended, do something here
+		//counter ended
+		endGame(true);
 		return;
 	}
 	document.querySelector('#timer').innerHTML = count + ' secs';
@@ -69,9 +74,16 @@ function startGame() {
 }
 //End game function//
 function endGame(timeIsUp) {
-	choices.classList.add('hide');
-	inputForm.classList.remove('hide');
-	document.querySelector('#question').innerHTML = 'Your score is: ' + score;
+	if (timeIsUp) {
+		choices.classList.add('hide');
+		inputForm.classList.remove('hide');
+		document.querySelector('#question').innerHTML = 'GAME OVER! Score: ' + score;
+	} else {
+		choices.classList.add('hide');
+		inputForm.classList.remove('hide');
+		document.querySelector('#question').innerHTML = 'YOU WIN! Score: ' + score;
+		clearInterval(counter);
+	}
 }
 
 //Populate choice passes in a question object (aQuestion) so we can load choices to HTML//
@@ -89,7 +101,7 @@ function checkAnswer() {
 	var choiceButton = document.getElementById(choiceButtonId);
 
 	//If the answer is right + 25 to the score, and if the answer is wrong deduct 10 seconds and -10 points/
-	if (choiceButton.innerHTML === questionObjectArray[questionPosition].correctAnswer) {
+	if (choiceButton.textContent === questionObjectArray[questionPosition].correctAnswer) {
 		score = score + 25;
 	} else {
 		score = score - 10;
@@ -105,3 +117,27 @@ function checkAnswer() {
 		document.querySelector('#question').innerHTML = questionObjectArray[questionPosition].question;
 	}
 }
+
+function saveScore() {
+	console.log('in svae score');
+	var initials = document.querySelector('#scoreInitals').value;
+
+	var nameScore = {
+		name: initials,
+		score: score
+	};
+
+	localStorage.setItem(scoresKey++, JSON.stringify(nameScore));
+
+	//const store = JSON.parse(localStorage.getItem(0));
+	//console.log(store);
+}
+
+function restartGame() {
+	questionPosition = 0;
+	count = 70;
+}
+
+$(document).ready(function() {
+	$('.sidenav').sidenav();
+});

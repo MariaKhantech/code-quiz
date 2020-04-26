@@ -1,11 +1,16 @@
 * #box {
 	border-style: double;
-	border-color: #0d47a1;
+	border-color: #1565c0;
 	border-width: 10px;
 	padding: 100px;
 	text-align: center;
-	background-color: whitesmoke;
+	background-color: white;
 	font-weight: bold;
+	color: #1565c0;
+}
+
+html {
+	font-family: 'Times New Roman', Times, serif;
 }
 
 body {
@@ -22,5 +27,18 @@ body {
 	margin-top: 50px;
 }
 
-#choices {
+.timeStyle {
+	color: #1565c0;
+	border: double;
+	background: white;
+	margin-bottom: 20px;
+	width: 350px;
+	height: 150px;
+	text-align: center;
+}
+p {
+	font-size: 25px;
+}
+.nav-mobile {
+	font-size: 20px;
 }

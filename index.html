@@ -10,7 +10,7 @@
     <!-- Compiled and minified CSS -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
     <!--My google font choice-->
-    <link href="https://fonts.googleapis.com/css2?family=Lora&display=swap" rel="stylesheet">
+    
 
     <link rel="stylesheet" href="assets/css/style.css">
 
@@ -20,31 +20,40 @@
 <body>
 
     <nav>
-        <div class="nav-wrapper blue darken-4">
-            <a href="#" class="brand-logo center">Animal Quiz Games</a>
+        <div class="nav-wrapper cyan darken-1">
+            <a href="#" class="brand-logo center ">Animal Quiz Games</a>
+            <a href="#" class="sidenav-trigger" data-target="mobile-links">
+              <i class="material-icon">menu</i>
+            </a>
             <ul id="nav-mobile" class="left hide-on-med-and-down">
-                <li><a href="badges.html">How to Play</a></li>
+                <li><a href="/how-to-play.html.html">How to Play</a></li>
                 <li><a href="/high-score.html">Score Board</a></li>
             </ul>
         </div>
     </nav>
 
+    <ul class="sidenav" id="mobile-links">
+      <li><a href="/how-to-play.html.html">How to Play</a></li>
+      <li><a href="/high-score.html">Score Board</a></li>
+    </ul>
+
     <div class="container">
         
         <div class="row" class="row1">
-            <div class="col s12 m6 center-align">
-                     <h4> Time Remaining: </h4>
+            <div class="col s12 m6 ">
+              <div class="timeStyle center-align chip">      
+              <h4> Time Remaining: </h4>
                     <h4 id = "timer">70 secs</h4>
-                
+                  </div> 
                 
                 <div class="start-quiz text-align" id="box">
-                    <p id="question">Think you know your animal?<br>
+                    <p class="flow-text" id="question">Think you know your animal?<br>
                         Take this quiz!</p>
 
                     <br>
                     <br>
                     <!--button-->
-                    <button onclick="startGame()" id="startBtn" class="btn waves-effect waves-light btn-large btn-floating  blue darken-4" name="action ">Start
+                    <button onclick="startGame()" id="startBtn" class="btn waves-effect waves-light btn-large btn-floating cyan darken-1 pulse" name="action ">Start
                         <i class="material-icons right"></i>
                       </button>
                       <!--choices-->
@@ -56,11 +65,11 @@
                       </div>
 
                       <div class="hide" id="inputForm">
-                        <form id="scoreForm" action="high-score.html">
+                        
                           <label>Enter your initals for High Score board :</label>
                           <input id="scoreInitals" type= "text"> </input>
-                          <input type="submit" value="Submit"></input>
-                        </form>
+                          <input type="submit" value="Submit" onclick="saveScore()"></input>
+                        
                       </div>
                   </div>
 
@@ -89,7 +98,7 @@
       </div> -->
 
 
-    
+    <script src="https://code.jquery.com/jquery-3.5.0.min.js"></script>
     <!-- Compiled and minified JavaScript -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
     <script src="assets/js/script.js"></script>
