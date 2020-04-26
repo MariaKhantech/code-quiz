@@ -121,8 +121,8 @@ function checkAnswer() {
 function saveScore() {
 	var initials = document.querySelector('#scoreInitals').value;
 	//Initialzing the high score array if not in local storage//
-	if (JSON.parse(localStorage.getItem('highscores'))) {
-		var highscoreArray = JSON.parse(localStorage.getItem('highscores'));
+	if (JSON.parse(localStorage.getItem('highScore'))) {
+		var highscoreArray = JSON.parse(localStorage.getItem('highScore'));
 	} else {
 		var highscoreArray = [];
 	}
@@ -133,16 +133,22 @@ function saveScore() {
 	};
 	// Putting namescore object into the highscore array//
 	highscoreArray.push(nameScore);
-
-	localStorage.setItem(scoresKey++, JSON.stringify(nameScore));
-
-	//const store = JSON.parse(localStorage.getItem(0));
-	//console.log(store);
+	//sorting array by highest score//
+	highscoreArray.sort(function(a, b) {
+		return b.score - a.score;
+	});
+	localStorage.setItem('highScore', JSON.stringify(highscoreArray));
+	restartGame();
 }
-
+//resets the game back to the begining//
 function restartGame() {
+	//setting question position back to zero and setting timer back to 70 seconds//
 	questionPosition = 0;
 	count = 70;
+	//brings back start game screen//
+	document.querySelector('#question').innerHTML = 'Think you know your animal?<br> Take this quiz!';
+	startBtn.classList.remove('hide');
+	inputForm.classList.add('hide');
 }
 
 $(document).ready(function() {

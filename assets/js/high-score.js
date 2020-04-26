@@ -1,14 +1,17 @@
-// function stores score, recieving from local storage and compares//
-function storeScore() {
-	var highScore = JSON.parse(window.localStorage.getItem('highScore'));
-	highScore.sort(function(a, b) {
-		return a.score - b.score;
-	});
+console.log('is this working');
+//grab the highscore list element <ul>
+const highScoreList = document.querySelector('#highScoreList');
+//getting highscore list from local storage//
+var highScore = JSON.parse(localStorage.getItem('highScore'));
+var innerListContent = '';
+var rank = 1;
 
-	highScore.forEach(function(score) {
-		var ulTag = document.createElement('ul');
-		ulTag.textContent = score.initals + ' ' + score.score;
-	});
+for (var i = 0; i < highScore.length; i++) {
+	var liTag = document.createElement('li');
+	liTag.textContent = rank + '. ' + highScore[i].name + ' ' + highScore[i].score;
+	//innerListContent = innerListContent + append.textContent;
+	highScoreList.append(liTag);
+	rank = rank + 1;
 }
-//enter initals//
-// enter initals and score into table
+
+//highScoreList.app innerHTML = innerListContent;

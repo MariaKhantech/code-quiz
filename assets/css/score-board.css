@@ -15,3 +15,14 @@ body {
 	background-size: cover;
 	height: 100vh;
 }
+
+.timeStyle {
+	color: #1565c0;
+	border: double;
+	border-color: #00acc1;
+	background: white;
+	margin-bottom: 20px;
+	width: 350px;
+	height: 150px;
+	text-align: center;
+}

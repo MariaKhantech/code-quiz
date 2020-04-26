@@ -11,7 +11,7 @@
         <!--My google font choice-->
         <link href="https://fonts.googleapis.com/css2?family=Lora&display=swap" rel="stylesheet">
     
-        <link rel="stylesheet" href="/assets/css/high-score.css">
+        <link rel="stylesheet" href="assets/css/score-board.css">
     
         <title>Animal Quiz Games</title>
     </head>
@@ -22,16 +22,26 @@
             <a href="#" class="brand-logo center">Animal Quiz Games</a>
             <ul id="nav-mobile" class="left hide-on-med-and-down">
                 <li><a href="/how-to-play.html">How to Play</a></li>
-                <li><a href="/high-score.html">Score Board</a></li>
+                <li><a href="score-board.html">Score Board</a></li>
             </ul>
         </div>
     </nav>
 
-    <div>
-        
+    <div class="container">
+        <div class="row" class="row1">
+            <div class="col s12 m6 ">
+              <div class="timeStyle center-align chip">      
+              <h4> HIGH SCORE </h4>
+                    
+                  </div> 
+                
+                <div class="start-quiz text-align" id="box">
+                    <ul id = "highScoreList"></ul>
+                    
+                </div>
+            </div>
+        </div>
     </div>
-
-
  <!-- Compiled and minified JavaScript -->
  <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
  <script src="assets/js/high-score.js"></script>
