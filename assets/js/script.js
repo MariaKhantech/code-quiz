@@ -68,7 +68,11 @@ function startGame() {
 	populateChoice(questionObjectArray[questionPosition]);
 }
 //End game function//
-function endGame(timeIsUp) {}
+function endGame(timeIsUp) {
+	choices.classList.add('hide');
+	inputForm.classList.remove('hide');
+	document.querySelector('#question').innerHTML = 'Your score is: ' + score;
+}
 
 //Populate choice passes in a question object (aQuestion) so we can load choices to HTML//
 function populateChoice(aQuestion) {
@@ -94,6 +98,10 @@ function checkAnswer() {
 
 	//Transition to the next question//
 	questionPosition = questionPosition + 1;
-	populateChoice(questionObjectArray[questionPosition]);
-	document.querySelector('#question').innerHTML = questionObjectArray[questionPosition].question;
+	if (questionPosition === questionObjectArray.length) {
+		endGame();
+	} else {
+		populateChoice(questionObjectArray[questionPosition]);
+		document.querySelector('#question').innerHTML = questionObjectArray[questionPosition].question;
+	}
 }
