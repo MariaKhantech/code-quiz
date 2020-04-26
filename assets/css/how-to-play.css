@@ -1,11 +1,12 @@
 * #box {
 	border-style: double;
-	border-color: #0d47a1;
+	border-color: #00acc1;
 	border-width: 10px;
 	padding: 100px;
 	text-align: center;
-	background-color: whitesmoke;
+	background-color: white;
 	font-weight: bold;
+	color: #1565c0;
 }
 
 body {
@@ -31,4 +32,18 @@ html {
 	position: right;
 	top: 0;
 	left: 0;
+}
+
+nav ul a {
+	font-size: 22px;
+}
+.timeStyle {
+	color: #1565c0;
+	border: double;
+	border-color: #00acc1;
+	background: white;
+	margin-bottom: 20px;
+	width: 350px;
+	height: 150px;
+	text-align: center;
 }

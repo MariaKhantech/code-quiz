@@ -18,30 +18,47 @@
     
 <body>
     <nav>
-        <div class="nav-wrapper blue darken-4">
+        <div class="nav-wrapper blue cyan darken-1">
             <a href="#" class="brand-logo center">Animal Quiz Games</a>
             <ul id="nav-mobile" class="left hide-on-med-and-down">
                 <li><a href="/how-to-play.html">How to Play</a></li>
-                <li><a href="score-board.html">Score Board</a></li>
+                <li><a href="/score-board.html">Score Board</a></li>
+                <li><a href="index.html">Quiz</a></li>
             </ul>
         </div>
     </nav>
 
+    <ul class="sidenav" id="mobile-links">
+        <li><a href="/how-to-play.html">How to Play</a></li>
+        <li><a href="/score-board.html">Score Board</a></li>
+    </ul>
+
     <div class="container">
         <div class="row" class="row1">
-            <div class="col s12 m6 ">
+            <div class="col s12 m6 center-align">
               <div class="timeStyle center-align chip">      
-              <h4> HIGH SCORE </h4>
-                    
-                  </div> 
-                
-                <div class="start-quiz text-align" id="box">
-                    <ul id = "highScoreList"></ul>
-                    
+              <h4 class="scoretitle"> HIGH SCORE </h4>
+            </div> 
+            </div>  
+             </div>
+            <div class="row" >
+                <div class="col s12 m6 l6 center-align">
+                <div class="text-align" id="box">
+                    <table id = "highScoreTable">
+                        <tr>
+                            <th>Rank</th>
+                            <th>Name</th>
+                            <th>Score</th>
+                        </tr>
+                </table>
                 </div>
-            </div>
-        </div>
+                </div>
+                </div>
+          
+        
     </div>
+
+<script src="https://code.jquery.com/jquery-3.5.0.min.js"></script>
  <!-- Compiled and minified JavaScript -->
  <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
  <script src="assets/js/high-score.js"></script>

@@ -43,3 +43,9 @@ p {
 nav ul a {
 	font-size: 22px;
 }
+#choice1,
+#choice2,
+#choice3,
+#choice4 {
+	margin-bottom: 30px;
+}

@@ -120,6 +120,7 @@ function checkAnswer() {
 
 function saveScore() {
 	var initials = document.querySelector('#scoreInitals').value;
+
 	//Initialzing the high score array if not in local storage//
 	if (JSON.parse(localStorage.getItem('highScore'))) {
 		var highscoreArray = JSON.parse(localStorage.getItem('highScore'));

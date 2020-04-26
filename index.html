@@ -19,7 +19,7 @@
 
 <body>
 
-    <nav>
+  <nav>
         <div class="nav-wrapper cyan darken-1">
             <a href="#" class="brand-logo center ">Animal Quiz Games</a>
             <a href="#" class="sidenav-trigger" data-target="mobile-links">
@@ -28,56 +28,55 @@
             <ul id="nav-mobile" class="left hide-on-med-and-down">
                 <li><a href="how-to-play.html">How to Play</a></li>
                 <li><a href="score-board.html">Score Board</a></li>
+                <li><a href="index.html">Quiz</a></li>
             </ul>
         </div>
-    </nav>
+  </nav>
 
-    <ul class="sidenav" id="mobile-links">
+  <ul class="sidenav" id="mobile-links">
       <li><a href="/how-to-play.html">How to Play</a></li>
-      <li><a href="score-board.html">Score Board</a></li>
-    </ul>
+      <li><a href="/score-board.html">Score Board</a></li>
+  </ul>
 
-    <div class="container">
+  <div class="container">
         
-        <div class="row" class="row1">
-            <div class="col s12 m6 ">
-              <div class="timeStyle center-align chip">      
-              <h4> Time Remaining: </h4>
-                    <h4 id = "timer">70 secs</h4>
-                  </div> 
-                
-                <div class="start-quiz text-align" id="box">
-                    <p class="flow-text" id="question">Think you know your animal?<br>
-                        Take this quiz!</p>
-
-                    <br>
+  <div class="row" class="row1">
+      <div class="col s12 m5 center-align">
+        <div class="timeStyle center-align chip">      
+          <h4> Time Remaining: </h4>
+            <h4 id = "timer">70 secs</h4>
+          </div>
+          </div>
+          <div class="row" class="row1">
+            <div class="col s12 m12 l6 center-align ">
+              <div class="start-quiz text-align" id="box">
+                <p id="question">Think you know your animal?<br>
+                   Take this quiz!</p>
+                   <br>
                     <br>
                     <!--button-->
-                    <button onclick="startGame()" id="startBtn" class="btn waves-effect waves-light btn-large btn-floating cyan darken-1 pulse" name="action ">Start
-                        <i class="material-icons right"></i>
-                      </button>
+          <button onclick="startGame()" id="startBtn" class="btn waves-effect waves-light btn-large btn-floating cyan darken-1 pulse" name="action ">Start
+            <i class="material-icons right"></i>
+            </button>
                       <!--choices-->
-                      <div class="hide valign-wrapper" id="choices">
-                        <a onclick="checkAnswer()" id="choice1" class="waves-effect waves-light btn-small  amber darken-2">Button</a>
-                        <a onclick="checkAnswer()" id="choice2" class="waves-effect waves-light btn-small  amber darken-2">Button</a>
-                        <a onclick="checkAnswer()" id="choice3" class="waves-effect waves-light btn-small amber darken-2">Button</a>
-                        <a onclick="checkAnswer()" id="choice4" class="waves-effect waves-light btn-small  amber darken-2">Button</a>
-                      </div>
-
-                      <div class="hide" id="inputForm">
-                        
-                          <label class="">Enter your initals for High Score board :</label>
-                          <input id="scoreInitals" type= "text"> </input>
-                          <input type="submit" value="Submit" onclick="saveScore()"></input>
-                        
-                      </div>
-                  </div>
-
+            <div class="hide" id="choices">
+             <a onclick="checkAnswer()" id="choice1" class="center-align waves-effect waves-light btn-small amber darken-2">Button</a>
+             <a onclick="checkAnswer()" id="choice2" class="waves-effect waves-light btn-small  amber darken-2">Button</a>
+             <a onclick="checkAnswer()" id="choice3" class="waves-effect waves-light btn-small amber darken-2">Button</a>
+             <a onclick="checkAnswer()" id="choice4" class="waves-effect waves-light btn-small  amber darken-2">Button</a>
                 </div>
+
+                 <div class="hide" id="inputForm">
+                        
+                  <label class="">Enter your initals for High Score board :</label>
+                  <input id="scoreInitals" type= "text"> </input>
+                  <input type="submit" value="Submit" onclick="saveScore()"></input>
+                  </div>
+                </div>
+              </div>
             </div>
-        </div>
-
-
+          </div>
+    </div>
     
 
     <script src="https://code.jquery.com/jquery-3.5.0.min.js"></script>
