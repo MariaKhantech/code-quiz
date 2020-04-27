@@ -104,11 +104,12 @@ function checkAnswer() {
 	if (choiceButton.textContent === questionObjectArray[questionPosition].correctAnswer) {
 		score = score + 25;
 		validateAnswer('Correct!');
+		playSound('/assets/sounds/yes-correct.mp3');
 	} else {
 		score = score - 10;
 		count = count - 15;
 		validateAnswer('Incorrect!');
-		endSong();
+		playSound('/assets/sounds/no-incorrect.mp3');
 	}
 
 	//Transition to the next question//
@@ -129,7 +130,7 @@ function saveScore() {
 
 	//if the initials is empty exot the function
 	if (initials === '') {
-		alert('please enter initials');
+		alert('Please enter your initals for scoring.');
 		return;
 	}
 
@@ -175,11 +176,12 @@ function validateAnswer(msg) {
 	}, 1500);
 }
 
-function endSong() {
-	var endSong = new Audio('/assets/sounds/no-incorrect.mp3');
-	endSong.volume = 0.2;
-	endSong.play();
+function playSound(audioFile) {
+	var playSound = new Audio(audioFile);
+	playSound.volume = 0.6;
+	playSound.play();
 }
+document.querySelector('#audiolvl').volume = 0.2;
 
 $(document).ready(function() {
 	$('.sidenav').sidenav();
