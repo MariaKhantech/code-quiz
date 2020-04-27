@@ -79,10 +79,17 @@ function endGame(timeIsUp) {
 		inputForm.classList.remove('hide');
 		document.querySelector('#question').innerHTML = 'GAME OVER! Score: ' + score;
 	} else {
-		choices.classList.add('hide');
-		inputForm.classList.remove('hide');
-		document.querySelector('#question').innerHTML = 'YOU WIN! Score: ' + score;
-		clearInterval(counter);
+		if (score > 0) {
+			choices.classList.add('hide');
+			inputForm.classList.remove('hide');
+			document.querySelector('#question').innerHTML = 'YOU WIN! Score: ' + score;
+			clearInterval(counter);
+		} else {
+			choices.classList.add('hide');
+			inputForm.classList.remove('hide');
+			document.querySelector('#question').innerHTML = 'YOU LOSE! Score: ' + score;
+			clearInterval(counter);
+		}
 	}
 }
 
