@@ -9,6 +9,9 @@ When the timer reaches 0 you are presented with the GAME OVER screen. You then e
 
 ![firstpage](https://user-images.githubusercontent.com/61640527/80329235-b02f5380-880f-11ea-99b2-4ba163eb780f.png)
 
+**Questions Page**
+
+![secondpage](https://user-images.githubusercontent.com/61640527/80329503-8f1b3280-8810-11ea-8af8-bf9e97b4dde7.png)
 
 
 
