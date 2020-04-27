@@ -19,7 +19,7 @@ When the timer reaches 0 you are presented with the GAME OVER screen. You then e
 
 ![winscreen](https://user-images.githubusercontent.com/61640527/80329551-b83bc300-8810-11ea-87f9-7cd4b0ff30d1.png)
 
-** Score Board**
+**Score Board**
 
 ![scoreboard](https://user-images.githubusercontent.com/61640527/80330067-29c84100-8812-11ea-82da-6b829c9689ce.png)
 
