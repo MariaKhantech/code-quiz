@@ -13,5 +13,8 @@ When the timer reaches 0 you are presented with the GAME OVER screen. You then e
 
 ![secondpage](https://user-images.githubusercontent.com/61640527/80329503-8f1b3280-8810-11ea-8af8-bf9e97b4dde7.png)
 
+**Winners Screen**
+
+![winscreen](https://user-images.githubusercontent.com/61640527/80329551-b83bc300-8810-11ea-87f9-7cd4b0ff30d1.png)
 
 
