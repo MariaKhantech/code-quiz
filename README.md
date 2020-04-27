@@ -1,4 +1,4 @@
-##Animals Quiz Games
+## H2 Animals Quiz Games
 ***************************************************************************************************************************************
 I have created a Quiz application, using JavaScript and Materialized. 
 
