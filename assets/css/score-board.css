@@ -33,8 +33,8 @@ body {
 	border-color: #00acc1;
 	background: white;
 	margin-bottom: 10px;
-	width: 350px;
-	height: 150px;
+	width: 200px;
+	height: 125px;
 	text-align: center;
 }
 p {
@@ -42,4 +42,15 @@ p {
 }
 nav ul a {
 	font-size: 22px;
+}
+.sidenav li > a {
+	font-size: 22px;
+	background-color: #00acc1;
+	color: white;
+}
+@media (max-width: 767px) {
+	.col {
+		width: 50%;
+		margin: 0 auto;
+	}
 }

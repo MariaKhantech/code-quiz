@@ -100,7 +100,7 @@ function checkAnswer() {
 	var choiceButtonId = event.srcElement.id;
 	var choiceButton = document.getElementById(choiceButtonId);
 
-	//If the answer is right + 25 to the score, and if the answer is wrong deduct 10 seconds and -10 points/
+	//If the answer is right + 25 to the score, and if the answer is wrong deduct 15 seconds and -10 points/
 	if (choiceButton.textContent === questionObjectArray[questionPosition].correctAnswer) {
 		score = score + 25;
 		validateAnswer('Correct!');

@@ -47,3 +47,15 @@ nav ul a {
 	height: 150px;
 	text-align: center;
 }
+
+.sidenav li > a {
+	font-size: 22px;
+	background-color: #00acc1;
+	color: white;
+}
+@media (max-width: 767px) {
+	.col {
+		width: 50%;
+		margin: 0 auto;
+	}
+}

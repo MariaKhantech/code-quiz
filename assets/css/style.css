@@ -56,3 +56,8 @@ nav ul a {
 		margin: 0 auto;
 	}
 }
+.sidenav li > a {
+	font-size: 22px;
+	background-color: #00acc1;
+	color: white;
+}
