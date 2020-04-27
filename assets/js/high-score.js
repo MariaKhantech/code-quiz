@@ -24,3 +24,6 @@ if (highScore) {
 		rank++;
 	}
 }
+$(document).ready(function() {
+	$('.sidenav').sidenav();
+});

@@ -54,3 +54,8 @@ nav ul a {
 		margin: 0 auto;
 	}
 }
+
+th,
+td {
+	text-align: center;
+}
