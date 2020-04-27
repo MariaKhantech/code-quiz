@@ -20,3 +20,11 @@ When the timer reaches 0 you are presented with the GAME OVER screen. You then e
 ** Score Board**
 
 ![scoreboard](https://user-images.githubusercontent.com/61640527/80330067-29c84100-8812-11ea-82da-6b829c9689ce.png)
+
+************************************************************************************************************************
+
+**GIF Game Play**
+
+![quizcoderecord](https://user-images.githubusercontent.com/61640527/80330229-a1966b80-8812-11ea-9eed-b61c06e26d6e.gif)
+
+
