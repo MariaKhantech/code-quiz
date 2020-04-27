@@ -50,3 +50,9 @@ nav ul a {
 	display: block;
 	background-color: #00acc1;
 }
+@media (max-width: 767px) {
+	.col {
+		width: 50%;
+		margin: 0 auto;
+	}
+}

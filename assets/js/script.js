@@ -175,12 +175,13 @@ function validateAnswer(msg) {
 		validateanswer.classList.add('hide');
 	}, 1500);
 }
-
+//sets volume for yes and nos//
 function playSound(audioFile) {
 	var playSound = new Audio(audioFile);
 	playSound.volume = 0.6;
 	playSound.play();
 }
+//sets the lvl of background music//
 document.querySelector('#audiolvl').volume = 0.2;
 
 $(document).ready(function() {
