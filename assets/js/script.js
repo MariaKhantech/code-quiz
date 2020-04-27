@@ -28,11 +28,10 @@ var questionTwo = {
 };
 
 var questionThree = {
-	question:
-		'All the animals in the Artic Tundra region are endangered due to its habitat, but which one of these animals is the closest to extincion in the Artic?',
-	choices: [ 'Artic fox', 'Polar bear', 'Narwhal', 'Musk Ox' ],
+	question: 'How many Siberian tigers left in the world?',
+	choices: [ '3,900', '100', '5,000', '8,000' ],
 
-	correctAnswer: 'Artic fox'
+	correctAnswer: '3,900'
 };
 
 var questionFour = {
@@ -49,7 +48,7 @@ var questionPosition = 0;
 //Timer function//
 function timer() {
 	count = count - 1;
-	if (count <= 0) {
+	if (count < 0) {
 		clearInterval(counter);
 		//counter ended
 		endGame(true);
@@ -72,6 +71,7 @@ function startGame() {
 	//Calling the function populate choice and passing in question one//
 	populateChoice(questionObjectArray[questionPosition]);
 }
+
 //End game function//
 function endGame(timeIsUp) {
 	if (timeIsUp) {
@@ -103,15 +103,21 @@ function checkAnswer() {
 	//If the answer is right + 25 to the score, and if the answer is wrong deduct 10 seconds and -10 points/
 	if (choiceButton.textContent === questionObjectArray[questionPosition].correctAnswer) {
 		score = score + 25;
+		validateAnswer('Correct!');
 	} else {
 		score = score - 10;
 		count = count - 15;
+		validateAnswer('Incorrect!');
+		endSong();
 	}
 
 	//Transition to the next question//
 	questionPosition = questionPosition + 1;
 	if (questionPosition === questionObjectArray.length) {
-		endGame();
+		//allow 2 seconds to show correct/incorrect before ending the game
+		setTimeout(function() {
+			endGame();
+		}, 1500);
 	} else {
 		populateChoice(questionObjectArray[questionPosition]);
 		document.querySelector('#question').innerHTML = questionObjectArray[questionPosition].question;
@@ -120,6 +126,12 @@ function checkAnswer() {
 
 function saveScore() {
 	var initials = document.querySelector('#scoreInitals').value;
+
+	//if the initials is empty exot the function
+	if (initials === '') {
+		alert('please enter initials');
+		return;
+	}
 
 	//Initialzing the high score array if not in local storage//
 	if (JSON.parse(localStorage.getItem('highScore'))) {
@@ -141,6 +153,7 @@ function saveScore() {
 	localStorage.setItem('highScore', JSON.stringify(highscoreArray));
 	restartGame();
 }
+
 //resets the game back to the begining//
 function restartGame() {
 	//setting question position back to zero and setting timer back to 70 seconds//
@@ -150,6 +163,22 @@ function restartGame() {
 	document.querySelector('#question').innerHTML = 'Think you know your animal?<br> Take this quiz!';
 	startBtn.classList.remove('hide');
 	inputForm.classList.add('hide');
+}
+
+//Sends a message if answer is correct or incorrect//
+function validateAnswer(msg) {
+	validateanswer.classList.remove('hide');
+	document.querySelector('#validateanswer').innerHTML = '<hr>' + msg;
+	//Puts validate answer back into hide//
+	setTimeout(function() {
+		validateanswer.classList.add('hide');
+	}, 1500);
+}
+
+function endSong() {
+	var endSong = new Audio('/assets/sounds/no-incorrect.mp3');
+	endSong.volume = 0.2;
+	endSong.play();
 }
 
 $(document).ready(function() {

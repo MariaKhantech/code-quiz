@@ -2,7 +2,7 @@
 	border-style: double;
 	border-color: #00acc1;
 	border-width: 10px;
-	padding: 100px;
+	padding: 50px;
 	text-align: center;
 	background-color: white;
 	font-weight: bold;
@@ -15,7 +15,7 @@ html {
 
 body {
 	background: no-repeat center fixed
-		url(https://images.unsplash.com/photo-1527931337379-81d740b20c2e?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1350&q=80);
+		url(https://images.pexels.com/photos/145939/pexels-photo-145939.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260);
 
 	background-size: cover;
 	height: 100vh;
@@ -47,5 +47,6 @@ nav ul a {
 #choice2,
 #choice3,
 #choice4 {
-	margin-bottom: 30px;
+	display: block;
+	background-color: #00acc1;
 }
