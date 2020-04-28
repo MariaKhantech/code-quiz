@@ -16,12 +16,12 @@
 </head>
 
 <body>
-
+<!--song playing in background-->
   <audio id="audiolvl" loop="loop" autoplay="autoplay">
     <source src="assets/sounds/memories.mp3" type="audio/mpeg">
   </audio>
 
-  <nav>
+  <nav class="nav-extended">
         <div class="nav-wrapper cyan darken-1">
             <a href ="index.html" class="brand-logo center ">Animal Quiz Games</a>
             <a href="#" class="sidenav-trigger" data-target="mobile-links">
@@ -53,11 +53,13 @@
               <div class="start-quiz text-align" id="box">
                 <p id="question">Think you know your animal?<br>
                    Take this quiz!</p>
-                    <!--button-->
+
+                    <!-- function button pulse-->
           <button onclick="startGame()" id="startBtn" class="btn waves-effect waves-light btn-large btn-floating cyan darken-1 pulse" name="action ">Start
             <i class="material-icons right"></i>
             </button>
-                      <!--choices-->
+            
+            <!--choices-->
             <div class="hide" id="choices">
               <ul>
               <a onclick="checkAnswer()" id="choice1" class="waves-effect waves-light btn-small amber darken-2">Button</a>
@@ -72,12 +74,11 @@
              <a onclick="checkAnswer()" id="choice4" class="waves-effect waves-light btn-small  amber darken-2">Button</a>
                </ul>
                 </div>
-                
+                <!--validates answer in js-->
                 <div id="validateanswer" class="text-bold">
                 </div>
 
-                 <div class="hide" id="inputForm">
-                        
+                 <div class="hide" id="inputForm">    
                   <label class="">Enter your initals for High Score board :</label>
                   <input id="scoreInitals"  class = "center-align" type= "text"> </input>
                   <input type="submit" value="Submit" onclick="saveScore()"></input>
