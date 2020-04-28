@@ -1,10 +1,10 @@
-## Animals Quiz Games
+## Animal Quiz Games
 
-I have created a Quiz application, using JavaScript and Materialized. 
+I have created a Quiz application, using JavaScript a bit if JQuery and Materialized. 
 
 When taking this quiz you will be prompted for questions. If you get one wrong you will loose 15 seconds and 10 points. If you get a question right you earn 25 points.
 
-When the timer reaches 0 you are presented with the GAME OVER screen. You then enter your initals for the Score Board.
+When the timer reaches 0 or time deducted has reduced you to 0 you are then presented with the GAME OVER screen. You then enter your initals for the Score Board.
 ***************************************************************************************************************************************
 
 **Start Page**
@@ -30,3 +30,5 @@ When the timer reaches 0 you are presented with the GAME OVER screen. You then e
 ![quizcoderecord](https://user-images.githubusercontent.com/61640527/80330229-a1966b80-8812-11ea-9eed-b61c06e26d6e.gif)
 
 
+**Music from:**
+https://www.bensound.com/
