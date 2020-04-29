@@ -37,28 +37,36 @@ body {
 	height: 125px;
 	text-align: center;
 }
+
 p {
 	font-size: 25px;
 }
+
 nav ul a {
 	font-size: 22px;
 }
+
 .sidenav li > a {
 	font-size: 22px;
 	background-color: #00acc1;
 	color: white;
-}
-@media (max-width: 767px) {
-	.col {
-		width: 50%;
-		margin: 0 auto;
-	}
 }
 
 th,
 td {
 	text-align: center;
 }
+
 .sidenav {
 	background-color: #00acc1;
+}
+
+@media (max-width: 767px) {
+	.col {
+		width: 50%;
+		margin: 0 auto;
+	}
+	#mobilenav {
+		font-size: 22px;
+	}
 }

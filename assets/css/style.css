@@ -50,15 +50,7 @@ nav ul a {
 	display: block;
 	background-color: #00acc1;
 }
-@media screen and (max-width: 507px) {
-	.col {
-		width: 50%;
-		margin: 0 auto;
-	}
-	.nav .brand-logo.center {
-		font-size: 20px;
-	}
-}
+
 .sidenav li > a {
 	font-size: 22px;
 	background-color: #00acc1;
@@ -74,4 +66,14 @@ nav .brand-logo {
 
 .sidenav {
 	background-color: #00acc1;
+}
+
+@media (max-width: 510px) {
+	.col {
+		width: 50%;
+		margin: 0 auto;
+	}
+	#mobilenav {
+		font-size: 22px;
+	}
 }
